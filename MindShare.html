@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
+    <script src="scripts.js"></script>
     <title>MindShare</title>
 </head>
 
@@ -35,16 +36,70 @@
         </div>
 
         <div class="right-column">
-        <iframe
-            align="right"
-            src="https://embed.figma.com/proto/0OKDl3w6iCwuWgGFoA5Bti/DECO-2200-A4-Final-Prototype?node-id=1296-8478&scaling=scale-up&content-scaling=fixed&page-id=3%3A118&starting-point-node-id=1296%3A8478&embed-host=share"
-            allowfullscreen></iframe>
+            <iframe align="right"
+                src="https://embed.figma.com/proto/0OKDl3w6iCwuWgGFoA5Bti/DECO-2200-A4-Final-Prototype?node-id=1296-8478&scaling=scale-up&content-scaling=fixed&page-id=3%3A118&starting-point-node-id=1296%3A8478&embed-host=share"
+                allowfullscreen></iframe>
         </div>
 
 
     </main>
     <div class="prototype-body">
         <p> all about the project</p>
+
+        <div class="double-diamond-container">
+            <!-- First diamond: Discover and Define -->
+            <div class="diamond" id="diamond-1">
+                <div class="diamond-half diamond-left" id="diamond-discover" onclick="showDiamondContent('discover')">
+                    Discover</div>
+                <div class="diamond-half diamond-right" id="diamond-define" onclick="showDiamondContent('define')">
+                    Define</div>
+            </div>
+
+            <!-- Second diamond: Develop and Deliver -->
+            <div class="diamond" id="diamond-2">
+                <div class="diamond-half diamond-left" id="diamond-develop" onclick="showDiamondContent('develop')">
+                    Develop</div>
+                <div class="diamond-half diamond-right" id="diamond-deliver" onclick="showDiamondContent('deliver')">
+                    Deliver</div>
+            </div>
+        </div>
+
+        <div class="diamond-content-container">
+            <div id="diamond-content-discover" class="diamond-content hidden">
+                <main class="main-content">
+                    <div class="card-container"> <!-- Container for cards -->
+                        <div class="card">
+                            <img src="assets/mindshare_thumbnail.png" alt="Project Image" class="card-image">
+                            <div class="card-text">
+                                <p id="project-name">MindShare</p>
+                                <p id="project-type">UI/UX Design</p>
+                                <p id="project-desc">A mobile application designed to foster social connectedness and
+                                    provide
+                                    accessible mental health resources for individuals seeking support.</p>
+                                <button class="view-button">View Project</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/samexplores_thumbnail.png" alt="Project Image" class="card-image">
+                            <div class="card-text">
+                                <p id="project-name">Sam Explores</p>
+                                <p id="project-type">UI/UX Design</p>
+                                <p id="project-desc">A UI/UX design project that aims to foster an open and safe
+                                    environment for
+                                    parents and young children to communicate about sex education-related topics.</p>
+                                <button class="view-button">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="diamond-content-define" class="diamond-content hidden">Define Content Here</div>
+            <div id="diamond-content-develop" class="diamond-content hidden">Develop Content Here</div>
+            <div id="diamond-content-deliver" class="diamond-content hidden">Deliver Content Here</div>
+        </div>
+
+
+
     </div>
 </body>
 
