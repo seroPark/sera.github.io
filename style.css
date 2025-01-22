@@ -1,11 +1,4 @@
-html,
-body {
-    scroll-snap-type: y mandatory;
-    height: 100%;
-    /* Ensure full height for scrolling */
-    overflow-y: scroll;
-    /* Allow vertical scrolling */
-}
+
 
 .highlightme {
     background-color: #fff2ce;
@@ -302,13 +295,16 @@ header {
   } */
 
   .side-nav {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    display: none; /* Initially hidden */
-    z-index: 100;
-  }
+	position: fixed;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
 
   .side-nav.active {
     opacity: 1;
@@ -660,6 +656,14 @@ header {
     display: flex;
     gap: 20px;
     width: 100%;
+  }
+
+  .project-figma div {
+    width: 50%;
+  }
+  .project-figma iframe {
+    width: 100%;
+    height: 400px;
   }
 
 
