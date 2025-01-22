@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_MindShare.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="scripts.js"></script>
     <title>MindShare</title>
 </head>
 
@@ -22,85 +22,434 @@
         </nav>
     </header>
 
-    <main class="prototype-intro"> <!-- Main container for consistent spacing -->
-        <div class="left-column">
-            <h1 class="project_title">MindShare</h1>
-            <p>
-                MindShare is a mobile application that empowers individuals to comfortably voice their emotional and
-                mental wellbeing.
-            </p>
-            <p>
-                By addressing the stigma surrounding mental health, the app offers reliable support and resources,
-                alongside credible information and education, to foster a more informed and compassionate society.
-            </p>
-        </div>
+    <!-- Side Navigation -->
+    <div class="side-nav" id="side-nav">
+        <div class="side-nav-item" data-section="discover">Discover</div>
+        <div class="side-nav-item" data-section="define">Define</div>
+        <div class="side-nav-item" data-section="develop">Develop</div>
+        <div class="side-nav-item" data-section="deliver">Deliver</div>
+    </div>
 
-        <div class="right-column">
-            <iframe align="right"
-                src="https://embed.figma.com/proto/0OKDl3w6iCwuWgGFoA5Bti/DECO-2200-A4-Final-Prototype?node-id=1296-8478&scaling=scale-up&content-scaling=fixed&page-id=3%3A118&starting-point-node-id=1296%3A8478&embed-host=share"
-                allowfullscreen></iframe>
-        </div>
+    <div class="section" id="intro">
+        <div class="prototype-textimage">
+            <div class="left-column">
+                <h1 class="project_title">MindShare</h1>
+                <p>
+                    MindShare is a mobile application that empowers individuals to comfortably voice their emotional
+                    and mental wellbeing. By addressing the stigma surrounding mental health, the app offers reliable
+                    support and resources, alongside credible information and education, to foster a more informed and
+                    compassionate society.
+                </p>
 
+                <button class="scroll-button" onclick="scrollToFinalPrototype()">View Final Prototype</button>
 
-    </main>
-    <div class="prototype-body">
-        <p> all about the project</p>
-
-        <div class="double-diamond-container">
-            <!-- First diamond: Discover and Define -->
-            <div class="diamond" id="diamond-1">
-                <div class="diamond-half diamond-left" id="diamond-discover" onclick="showDiamondContent('discover')">
-                    Discover</div>
-                <div class="diamond-half diamond-right" id="diamond-define" onclick="showDiamondContent('define')">
-                    Define</div>
             </div>
 
-            <!-- Second diamond: Develop and Deliver -->
-            <div class="diamond" id="diamond-2">
-                <div class="diamond-half diamond-left" id="diamond-develop" onclick="showDiamondContent('develop')">
-                    Develop</div>
-                <div class="diamond-half diamond-right" id="diamond-deliver" onclick="showDiamondContent('deliver')">
-                    Deliver</div>
+            <div class="right-column">
+                <img src="assets/mindshare_intro.png" alt="Mock Up Images" class="intro-image">
             </div>
         </div>
 
-        <div class="diamond-content-container">
-            <div id="diamond-content-discover" class="diamond-content hidden">
-                <main class="main-content">
-                    <div class="card-container"> <!-- Container for cards -->
-                        <div class="card">
-                            <img src="assets/mindshare_thumbnail.png" alt="Project Image" class="card-image">
-                            <div class="card-text">
-                                <p id="project-name">MindShare</p>
-                                <p id="project-type">UI/UX Design</p>
-                                <p id="project-desc">A mobile application designed to foster social connectedness and
-                                    provide
-                                    accessible mental health resources for individuals seeking support.</p>
-                                <button class="view-button">View Project</button>
-                            </div>
+        <div class="scroll-container">
+            <p>Scroll for Design Process</p>
+            <div class="down-arrow">
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="discover">
+        <div class="project-problem">
+            <div class="project-objective">
+                <h2>Problem Statement</h2>
+                <p>Societal, social and cultural stigmas surrounding mental health makes it difficult for individuals
+                    to communicate their struggles with emotional and mental well-being. Resulting barriers to
+                    communication limit ones’ access to mental health resources, further exacerbating their
+                    mental-health situation. </p>
+            </div>
+            <div class="project-question">
+                <h2>Questions</h2>
+                <ul>
+                    <li>How can we enable individual comfortability when it comes to voicing out about emotional and
+                        mental wellbeing?</li>
+                    <li>How do we enable improved accessibility to proper mental health resources for those in need?
+                    </li>
+                    <li>How do we tear down societal, social and cultural stigmatisation of mental health issues?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="research">
+            <h2>Methods</h2>
+            <p>To gain a deeper understanding of the problem space and inform our design process, we employed three
+                research methods: primary research, literature review, and case studies. Each method was carefully
+                chosen to explore different facets of the research question and ensure a well-rounded approach to data
+                collection.
+            </p>
+
+            <div class="research-methods">
+
+                <div class="method">
+                    <h3>Primary Research</h3>
+                    <p>Each team member conducted individual interviews on the topic, <mark class="highlightme">
+                            gathering qualitative insights
+                            into various experiences and perspectives </mark>. These findings were synthesised to refine
+                        our group's
+                        problem statement and align our objectives.
+                    </p>
+                </div>
+
+                <div class="method">
+                    <h3>Literature Review (Secondary Research)</h3>
+                    <p>A literature review was conducted to <mark class="highlightme"> gather insights from published
+                            sources on social stigma,
+                            mental health, community cohesion, and mental health education</mark>. By analysing and
+                        synthesising
+                        this data, we developed a theoretical foundation to guide our design
+                        decisions and identify key challenges within the space.
+                    </p>
+                </div>
+
+                <div class="method">
+                    <h3>Case Studies</h3>
+                    <p>Case studies of existing platforms and solutions were performed to <mark
+                            class="highlightme">evaluate their strengths and
+                            weaknesses</mark>. This analysis helped us identify gaps and opportunities in the current
+                        landscape,
+                        enabling us to focus on areas that are often overlooked.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section" id="define">
+        <h2>Key Findings</h2>
+
+        <div class="key-findings">
+            <h3>Primary Research</h3>
+            <div class="insight">
+                <div>
+                    <h4>Quantitative</h4>
+                    <ul>
+                        <li>72.1% of the respondents rated the mental health literacy of the general public a 3 and
+                            below on a scale of 1 to 5. (1 being the least literate)
+                        </li>
+                        <li>62.8% of respondents stated that they were not comfortable with sharing the state of their
+                            mental wellbeing with their family.
+                        </li>
+                        <li>69.7% of respondents stated that they were never taught the importance of mental wellbeing
+                            growing up.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Qualitative</h4>
+                    <p>As mentioned in the narrowing of our problem scenario, our research showed a sizeable amount of
+                        individuals faced issues when it came to comfortability of sharing about their mental and
+                        emotional issues.</p>
+                </div>
+
+            </div>
+
+            <h3>Literature Review</h3>
+            <div class="insight">
+                <div>
+                    <h4>Key Benefits</h4>
+                    <ul>
+                        <li>Many users avoid seeking offline help due to stigma but find comfort in the relatable and
+                            non-judgemental nature of online mental health forums (Smith-Merry et al., 2019).
+                        </li>
+                        <li>Online communities promote positive cognitive changes in individuals with mental illness (De
+                            Choudhury & Kiciman, 2017).
+                        </li>
+                        <li>Participation in these forums has been shown to reduce suicidal thoughts (Pruksachatkun et
+                            al., 2019).
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4>Challenges</h4>
+                    <ul>
+                        <li>Mental health forums can expose users to triggering content, posing potential risks
+                            (Smith-Merry et al., 2019).</li>
+                        <li>Users may struggle to maintain personal boundaries, often hesitating to post out of concern
+                            for negatively affecting others or being impacted themselves (Smith-Merry et al., 2019).
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h3>Case Study : Beyond Blue Forum</h3>
+            <div class="insight">
+                <div>
+                    <h4>Strengths</h4>
+                    <ol>
+                        <li>Personalised mental health advice</li>
+                        <li>Ease of access to reliable quality, informatio</li>
+                        <li>Safe and anonymous forum platform for judgement free conversations
+                    </ol>
+                    </li>
+                </div>
+                <div>
+                    <h4>Areas for Improvements</h4>
+                    <ol>
+                        <li>Convoluted navigation to forum on website</li>
+                        <li>Lack of visual hierarchy in composition of
+                            website and application elements</li>
+                        <li>Application and website has a "clinical" look,
+                            might seem uninviting to certain new users</li>
+                    </ol>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="affinity">
+            insert affinity diagram here
+        </div>
+    </div>
+
+    <div class="section" id="develop">
+        <div class="concept">
+            <h2>Proposed Concept</h2>
+            <p>Our key findings paved the way to identifying our key user needs, we ideated and settled on three crucial
+                features which our platform will be built upon, with the intent of addressing said user needs.
+            </p>
+
+            <div class="user-needs-features">
+                <div class="user-needs">
+                    <h3>User Needs</h3>
+                    <div class="grid-container">
+                        <div class="box" data-description="Detailed description about User Need A1.">
+                            <div class="title">User Need 1</div>
                         </div>
-                        <div class="card">
-                            <img src="assets/samexplores_thumbnail.png" alt="Project Image" class="card-image">
-                            <div class="card-text">
-                                <p id="project-name">Sam Explores</p>
-                                <p id="project-type">UI/UX Design</p>
-                                <p id="project-desc">A UI/UX design project that aims to foster an open and safe
-                                    environment for
-                                    parents and young children to communicate about sex education-related topics.</p>
-                                <button class="view-button">View Project</button>
-                            </div>
+                        <div class="box" data-description="Detailed description about User Need A2.">
+                            <div class="title">User Need A2</div>
+                        </div>
+                        <div class="box" data-description="Detailed description about User Need A3.">
+                            <div class="title">User Need A3</div>
                         </div>
                     </div>
-                </main>
+                </div>
+
+                <div class="features">
+                    <h3>Features</h3>
+                    <div class="grid-container">
+                        <div class="box" data-description="Detailed description about User Need B1.">
+                            <div class="title">User Need B1</div>
+                        </div>
+                        <div class="box" data-description="Detailed description about User Need B2.">
+                            <div class="title">User Need B2</div>
+                        </div>
+                        <div class="box" data-description="Detailed description about User Need B3.">
+                            <div class="title">User Need B3</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="diamond-content-define" class="diamond-content hidden">Define Content Here</div>
-            <div id="diamond-content-develop" class="diamond-content hidden">Develop Content Here</div>
-            <div id="diamond-content-deliver" class="diamond-content hidden">Deliver Content Here</div>
+
+            <div class="description-container">
+                <div class="description-content">Hover over a box to see details here.</div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="section" id="deliver">
+        <h2>Usability Test</h2>
+        <p>
+            Once we had our initial mock up, feedback was gathered through user-based testing with parents and children
+            and expert-based testing involving fellow students, tutors, and lecturers. This rigorous process enabled us
+            to identify pain points, refine interactions, and improve the overall user experience.
+        </p>
+        <div class="test-findings">
+            <h3>Key Usability Findings</h3>
+            <div class="usertest">
+
+                <div class="usertest-results">
+                    <h4>Interactive Storybook</h4>
+                    <div>
+                        <p id="strengths">Strengths</p>
+                        <ul>
+                            <li>Clarity & Accessibility: Clear, well-segmented content with simple language for younger
+                                audiences.</li>
+                            <li>Interactivity: Flashing icons and transitions fostered curiosity and excitement.</li>
+                            <li>Educational Value: Effectively addressed gaps in traditional sex education with
+                                foundational knowledge.</li>
+                        </ul>
+
+                        <p id="areasforimprovements">Areas for Improvements</p>
+                        <ul>
+                            <li>Interactive Consistency: Similar visual elements with varying interactivity caused
+                                confusion. </li>
+                            <li>Feedback Mechanisms: Lack of feedback for incorrect answers reduced learning impact.
+                            </li>
+                            <li>Content Depth: Some sections were text-heavy or overly complex, overwhelming younger
+                                users.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="usertest-results">
+                    <h4>Mobile Application</h4>
+                    <div>
+                        <p id="strengths">Strengths</p>
+                        <ul>
+                            <li>User Interface Design: Clean and user-friendly layout with appealing visuals.</li>
+                            <li>Content Presentation: Bite-sized summaries effectively delivered key topics.</li>
+                            <li>Parental Motivation: Highlighted gaps in users' own sex education and inspired proactive
+                                learning.</li>
+                        </ul>
+
+                        <p id="areasforimprovements">Areas for Improvements</p>
+                        <ul>
+                            <li>Content Appropriateness: Certain topics were too explicit or shallow for younger
+                                audiences.</li>
+                            <li>Confusing Interactivity: Icons and navigation lacked clarity, particularly for
+                                call-to-action elements.</li>
+                            <li>Instruction & Feedback: Users wanted clearer guidance on integrating the app with the
+                                storybook and
+                                addressing sensitive topics.</li>
+                            <li>Customization Features: Poor understanding of personalisation options led to confusion
+                                about their
+                                necessity.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
 
 
     </div>
+
+
+    <div class="final-prototype" id="final-prototype">
+        <h2>Sam Explores : Final Prototype</h2>
+        <p>
+            Below are the final prototypes of Sam Explores, showcasing the core features of both the storybook and
+            mobile application. While not fully functional, these prototypes effectively demonstrate the key
+            interactions, design elements, and features central to the user experience.
+        </p>
+        <div class="project-figma">
+            <div>
+                <h3>Interactive Storybook</h3>
+                <iframe
+                    src="https://embed.figma.com/proto/ewMdviqXTQgSWvKNLpDvW2/Portfolio-Prototypes?node-id=106-3297&scaling=scale-down&content-scaling=fixed&page-id=106%3A2950&starting-point-node-id=106%3A3288&embed-host=share"
+                    allowfullscreen></iframe>
+            </div>
+            <div>
+                <h3>Mobile Application for parents</h3>
+                <iframe
+                    src="https://embed.figma.com/proto/ewMdviqXTQgSWvKNLpDvW2/Portfolio-Prototypes?node-id=1-8028&p=f&scaling=scale-down&content-scaling=responsive&page-id=0%3A1&starting-point-node-id=1%3A8028&embed-host=share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+        const boxes = document.querySelectorAll('.box');
+        const descriptionContainer = document.querySelector('.description-container');
+        const descriptionContent = document.querySelector('.description-content');
+
+        boxes.forEach(box => {
+            box.addEventListener('mouseover', () => {
+                const description = box.getAttribute('data-description');
+                descriptionContent.textContent = description;
+                descriptionContainer.classList.add('active');
+            });
+
+            box.addEventListener('mouseout', () => {
+                descriptionContainer.classList.remove('active');
+                descriptionContent.textContent = ''; // Clear the content when no box is hovered
+            });
+        });
+
+
+        // JavaScript to scroll to the "final-prototype" div
+        function scrollToFinalPrototype() {
+            document.getElementById('final-prototype').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+
+        // JavaScript for interactive navigation
+        // JavaScript for interactive navigation
+        const nav = document.getElementById('side-nav');
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.side-nav-item');
+
+        function updateNavigation() {
+            let isInMainSection = false;
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const sectionId = section.id;
+
+                if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+                    // Only show side nav if in one of the target sections
+                    if (sectionId === 'discover' || sectionId === 'define' || sectionId === 'develop' || sectionId === 'deliver') {
+                        isInMainSection = true;
+                    }
+
+                    // Update the side navigation text styles and positions
+                    navItems.forEach(item => {
+                        item.style.fontSize = '16px';
+                        item.style.opacity = '0.5';
+                    });
+
+                    const activeItem = document.querySelector(`.side-nav-item[data-section="${sectionId}"]`);
+                    if (activeItem) {
+                        activeItem.style.fontSize = '24px'; // Big font for active section
+                        activeItem.style.opacity = '1'; // Full opacity for active section
+                    }
+                }
+            });
+
+            // If not in any of the main sections, hide the side-nav
+            if (!isInMainSection) {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        }
+
+        // Update navigation on scroll
+        window.addEventListener('scroll', updateNavigation);
+
+        // Smooth scroll to section when side-nav item is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const sectionId = e.target.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Initial update to handle page load position
+        updateNavigation();
+
+    </script>
 </body>
+
+
 
 </html>

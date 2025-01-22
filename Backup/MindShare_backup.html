@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- <script src="scripts.js"></script> -->
+    <title>MindShare</title>
+</head>
+
+<body>
+    <div class="top">
+        <header>
+            <button class="logo" onclick="location.href='index.html'">sera.</button>
+            <nav class="nav">
+                <button onclick="location.href='projects.html'">projects.</button>
+                <button onclick="location.href='about.html'">about.</button>
+            </nav>
+        </header>
+
+        <main class="prototype-intro"> <!-- Main container for consistent spacing -->
+            <div class="prototype-textimage">
+                <div class="left-column">
+                    <h1 class="project_title">MindShare</h1>
+                    <h3>
+                        MindShare is a mobile application that empowers individuals to comfortably voice their emotional
+                        and
+                        mental wellbeing.
+                    </h3>
+                    <h3>
+                        By addressing the stigma surrounding mental health, the app offers reliable support and
+                        resources,
+                        alongside credible information and education, to foster a more informed and compassionate
+                        society.
+                    </h3>
+
+                </div>
+
+                <div class="right-column">
+                    <img src="assets/mindshare_intro.png" alt="Mock Up Images" class="intro-image">
+                </div>
+            </div>
+
+            <div class="scroll-container">
+                <h5>Scroll down for more</h5>
+                <div class="down-arrow"></div>
+            </div>
+        </main>
+    </div>
+
+
+    <div class="final-proposal">
+        <div class="final-proposal-container">
+            <div class="topic">MindShare</div>
+            <div class="final-proposal-content">
+                <input type="radio" name="slider" checked id="proposal">
+                <input type="radio" name="slider" id="challenge">
+                <input type="radio" name="slider" id="objective">
+                <input type="radio" name="slider" id="solution">
+                <input type="radio" name="slider" id="figma">
+                <div class="list">
+                    <label for="proposal" class="proposal">
+                        <i class="fas fa-proposal"></i>
+                        <span class="title">Final Proposal</span>
+                    </label>
+                    <label for="challenge" class="challenge">
+                        <span class="icon"><i class="fas fa-challenge"></i></span>
+                        <span class="title">Challenges</span>
+                    </label>
+                    <label for="objective" class="objective">
+                        <span class="icon"><i class="far fa-objective"></i></span>
+                        <span class="title">Key Objectives</span>
+                    </label>
+                    <label for="solution" class="solution">
+                        <span class="icon"><i class="fas fa-solution"></i></span>
+                        <span class="title">Solution</span>
+                    </label>
+                    <label for="figma" class="figma">
+                        <span class="icon"><i class="far fa-figma"></i></span>
+                        <span class="title">Figma Prototype</span>
+                    </label>
+                    <div class="slider"></div>
+                </div>
+                <div class="text-content">
+                    <div class="proposal text">
+                        <div class="title">Final Proposal</div>
+                        <p>MindShare is a mobile application designed to connect individuals facing similar emotional
+                            and mental wellbeing challenges. It aims to create a supportive, stigma-free platform where
+                            users can openly discuss their experiences and access reliable mental health resources. By
+                            fostering a sense of social connectedness, MindShare empowers users to share and connect,
+                            promoting a more inclusive and understanding mental health community.</p>
+                    </div>
+                    <div class="challenge text">
+                        <div class="title">Challenges</div>
+                        <p>1.How can we enable individual comfortability when it comes to voicing out about emotional
+                            and mental well-being?
+                            2.How do we enable improved accessibility to proper mental health resources for those in
+                            need?
+                            3.How do we tear down societal, social and cultural stigmatisation of mental health issues?
+                        </p>
+                    </div>
+                    <div class="objective text">
+                        <div class="title">Key Objectives</div>
+                        <p>To design a user-centered mobile application prototype that fosters connection, provides
+                            accessible mental health resources, and incorporates insights from extensive primary and
+                            secondary research, along with user testing.</p>
+                    </div>
+                    <div class="solution text">
+                        <div class="title">Solution</div>
+                        <p>Community Engagement Features: Enabling users to connect with peers, engage in group support
+                            sessions, and participate in interactive mental health activities.
+                            Integrated Resource Access: Providing credible mental health information, self-help tools,
+                            and educational content directly within the app.
+                            User Experience Design: Creating an accessible and visually appealing interface that
+                            prioritizes ease of use and inclusivity for all users.
+                            Brand Development: Designing a cohesive brand identity, including logos and marketing
+                            materials that reflect MindShare’s mission.</p>
+                    </div>
+                    <div class="figma text">
+                        <iframe align="right"
+                            src="https://embed.figma.com/proto/0OKDl3w6iCwuWgGFoA5Bti/DECO-2200-A4-Final-Prototype?node-id=1296-8478&scaling=contain&page-id=3%3A118&starting-point-node-id=1296%3A8478&embed-host=share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="prototype-body" id="prototype-body">
+        <div class="double-diamond-container">
+            <!-- First diamond: Discover and Define -->
+            <div class="diamond" id="diamond-1">
+                <div class="diamond-half diamond-left" id="diamond-discover" onclick="showDiamondContent('discover')">
+                    <p>Discover</p>
+                </div>
+                <div class="diamond-half diamond-right" id="diamond-define" onclick="showDiamondContent('define')">
+                    <p>Define</p>
+                </div>
+            </div>
+
+            <!-- Second diamond: Develop and Deliver -->
+            <div class="diamond" id="diamond-2">
+                <div class="diamond-half diamond-left" id="diamond-develop" onclick="showDiamondContent('develop')">
+                    <p>Develop</p>
+                </div>
+                <div class="diamond-half diamond-right" id="diamond-deliver" onclick="showDiamondContent('deliver')">
+                    <p>Deliver</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="diamond-content-container">
+            <div id="diamond-content-discover" class="diamond-content hidden">
+                <main class="main-content">
+                    <div class="card-container"> <!-- Container for cards -->
+                        <div class="card">
+                            <img src="assets/mindshare_thumbnail.png" alt="Project Image" class="card-image">
+                            <div class="card-text">
+                                <p id="project-name">MindShare</p>
+                                <p id="project-type">UI/UX Design</p>
+                                <p id="project-desc">A mobile application designed to foster social
+                                    connectedness and
+                                    provide
+                                    accessible mental health resources for individuals seeking support.</p>
+                                <button class="view-button">View Project</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="assets/samexplores_thumbnail.png" alt="Project Image" class="card-image">
+                            <div class="card-text">
+                                <p id="project-name">Sam Explores</p>
+                                <p id="project-type">UI/UX Design</p>
+                                <p id="project-desc">A UI/UX design project that aims to foster an open and safe
+                                    environment for
+                                    parents and young children to communicate about sex education-related
+                                    topics.</p>
+                                <button class="view-button">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="diamond-content-define" class="diamond-content hidden">Define Content Here</div>
+            <div id="diamond-content-develop" class="diamond-content hidden">Develop Content Here</div>
+            <div id="diamond-content-deliver" class="diamond-content hidden">Deliver Content Here</div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

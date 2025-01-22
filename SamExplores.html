@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <title>Sam Explores</title>
 </head>
@@ -21,24 +22,408 @@
         </nav>
     </header>
 
-    <main class="prototype-intro"> <!-- Main container for consistent spacing -->
-        <div class="left-column">
-            <h1 class="project_title">Sam Explores</h1>
-            <p>
-                This is a simple description of the project. It provides an overview of the work, challenges faced,
-                and what was accomplished.
-            </p>
-        </div>
-        <div class="right-column">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450"
-                src="https://embed.figma.com/proto/ewMdviqXTQgSWvKNLpDvW2/Portfolio-Prototypes?node-id=1-8028&scaling=scale-down&content-scaling=responsive&page-id=0%3A1&starting-point-node-id=1%3A8028&embed-host=share"
-                allowfullscreen></iframe>
+    <!-- Side Navigation -->
+    <div class="side-nav" id="side-nav">
+        <div class="side-nav-item" data-section="discover">Discover</div>
+        <div class="side-nav-item" data-section="define">Define</div>
+        <div class="side-nav-item" data-section="develop">Develop</div>
+        <div class="side-nav-item" data-section="deliver">Deliver</div>
+    </div>
+
+    <div class="section" id="intro">
+        <div class="prototype-textimage">
+            <div class="left-column">
+                <h1 class="project_title">Sam Explores</h1>
+                <p>
+                    Sam Explores was conceptualised to tackle the global challenge of delivering comprehensive sexual
+                    education. Guided by the United Nations' Sustainable Development Goal 4 (Quality Education), our
+                    team
+                    developed an accessible and engaging tool to equip children and their parents with the knowledge and
+                    skills essential for healthy development.
+                </p>
+
+                <button class="scroll-button" onclick="scrollToFinalPrototype()">View Final Prototype</button>
+
+            </div>
+
+            <div class="right-column">
+                <img src="assets/samexplores_intro.png" alt="Mock Up Images" class="intro-image">
+            </div>
         </div>
 
-    </main>
-    <div class="prototype-body">
-        <p> all about the project</p>
+        <div class="scroll-container">
+            <p>Scroll for Design Process</p>
+            <div class="down-arrow">
+            </div>
+        </div>
     </div>
+
+    <div class="section" id="discover">
+        <div class="project-problem">
+            <div class="project-objective">
+                <h2>Research Objective</h2>
+                <p>To explore the dynamics of parent-child conversations about sex-related topics by investigating the
+                    diverse needs, desires and challenges experienced by parents and children. The study also aims to
+                    discover insights that can contribute to the development of effective strategies and resources for
+                    promoting open and informative discussions about sex-related subjects.</p>
+            </div>
+            <div class="project-question">
+                <h2>Questions</h2>
+                <ul>
+                    <li>How might early sexuality education equip children with practical knowledge for navigating
+                        real-life situations they may be confronted with?</li>
+                    <li>What are the primary barriers preventing parents from engaging in open discussions about
+                        holistic sexual education with their children, and what effective strategies exist for
+                        overcoming these obstacles?</li>
+                    <li>How can we enhance parental knowledge and understanding of the value of comprehensive sexuality
+                        education in early childhood, particularly in the context of cultural and social barriers?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="research">
+            <h2>Methods</h2>
+            <p>To gain a deep understanding of the problem space and user needs, we conducted comprehensive research
+                through three distinct methods: questionnaires, online ethnography, and interviews. Each method was
+                chosen to address specific aspects of the research question while capturing diverse perspectives.
+            </p>
+
+            <div class="research-methods">
+
+                <div class="method">
+                    <h3>Questionnaire</h3>
+                    <p>An online survey was designed to gather a broad, <strong><mark class="highlightme">quantitative
+                                overview of attitudes towards
+                                sexual education.</mark></strong> This included exploring topics such as <strong>access
+                            to resources, comfort in
+                            discussing sensitive topics, </strong>and <strong>existing knowledge gaps.</strong></p>
+                </div>
+
+                <div class="method">
+                    <h3>Online Ethnography</h3>
+                    <p>By observing discussions on platforms such as Reddit, Twitter, and ReachOut, we
+                        explored <strong><mark class=highlightme>unfiltered conversations around sexual
+                                education</mark></strong>.
+                        This method allowed us to identify recurring themes, <strong>cultural attitudes</strong>, and
+                        the <strong>influence of stigma or shame</strong> in online communities.
+                    </p>
+                </div>
+
+                <div class="method">
+                    <h3>Interviews</h3>
+                    <p>We conducted <strong>in-depth interviews with parents and adolescents</strong> to explore
+                        <strong><mark class="highlightme">personal
+                                experiences, challenges, and desires for sexual education</mark></strong>. These
+                        conversations provided nuanced,
+                        qualitative insights into user behaviours and unmet needs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section" id="define">
+        <h2>Analysis</h2>
+        <p>To analyse research findings into actionable insights, we utilised an affinity diagram to identify patterns
+            and prioritise key themes. This process helped us transform raw data into a structured understanding of user
+            needs and challenges.</p>
+        <div class="key-findings">
+            <h3>Key Findings</h3>
+            <div class="insight">
+                <button class="collapsible">Barriers to Communication <span class="arrow">&#9660;</span></button>
+                <div class="insight-dotpoints">
+                    <ul>
+                        <li>Cultural and religious conservatism fosters discomfort and stigma.</li>
+                        <li>Parents and adolescents struggle to initiate discussions due to embarrassment or
+                            uncertainty.</li>
+                        <li>Taboo topics, such as LGBTQ+ inclusion, are rarely addressed in conversations or educational
+                            materials.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight">
+                <button class="collapsible">Sources of Information <span class="arrow">&#9660;</span></button>
+                <div class="insight-dotpoints">
+                    <ul>
+                        <li>Adolescents primarily rely on schools, peers, and online platforms for sexual education.
+                        </li>
+                        <li>Parents are often excluded from this process or see it as the school’s responsibility.</li>
+                        <li>Misinformation from unverified sources perpetuates myths and misunderstandings.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight">
+                <button class="collapsible">Parental Challenges <span class="arrow">&#9660;</span></button>
+                <div class="insight-dotpoints">
+                    <ul>
+                        <li>Many parents lack the confidence or knowledge to discuss sexual education effectively.</li>
+                        <li>They express a need for accessible, reliable resources to guide conversations.</li>
+                        <li>Concerns about the “right timing” and approach create hesitation to engage in discussions.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight">
+                <button class="collapsible">Inclusivity and Representation <span class="arrow">&#9660;</span></button>
+                <div class="insight-dotpoints">
+                    <ul>
+                        <li>Current educational materials fail to adequately address diverse experiences, including
+                            those of LGBTQ+ individuals.</li>
+                        <li>Adolescents desire inclusive, judgment-free environments to discuss sensitive topics.</li>
+                        <li>Lack of representation perpetuates feelings of exclusion for marginalised groups.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight">
+                <button class="collapsible">Opportunities for Improvement <span class="arrow">&#9660;</span></button>
+                <div class="insight-dotpoints">
+                    <ul>
+                        <li>Providing parents with tools and resources can empower them to have meaningful discussions
+                            with their children.</li>
+                        <li>Schools can play a larger role by fostering open, inclusive dialogues and involving parents.
+                        </li>
+                        <li>Normalising ongoing, age-appropriate conversations about sexual health is crucial for
+                            long-term impact.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="affinity">
+            insert affinity diagram here
+        </div>
+    </div>
+
+    <div class="section" id="develop">
+        <div class="synthesis">
+            <h2>Synthesis</h2>
+            <p>Building on the insights gathered, we synthesised the data through user personas and journey maps. These
+                enabled us to dive deeper into user experiences, highlighting pain points and identifying opportunities
+                for improvement.
+            </p>
+            <div class="persona-map">
+                <img class="map" src="assets/usermapkiyara.png" alt="user journey map of a child (kiyara)">
+                <img class="map" src="assets/usermaplana.png" alt="user journey map of a parent (lana)">
+            </div>
+        </div>
+        <div class="ideation">
+            <h2>Ideation</h2>
+            <div>
+                <h3>Collaborative Storyboarding & Decision Matrix</h3>
+                <p>We utilised storyboarding to present and evaluate diverse concepts, collaboratively analysing their
+                    feasibility, strengths, and areas for improvement. To identify the most promising concept, we
+                    utilised a decision matrix with six key criteria.</p>
+            </div>
+            <div>
+                <ol>
+                    <li>Supports Continuous Learning: Encourages ongoing Comprehensive Sexuality Education for parents
+                        and adolescents.</li>
+                    <li>Facilitates Open Dialogue: Promotes meaningful conversations about sex-related topics between
+                        parents and children.</li>
+                    <li>Accessibility and Inclusivity: Accommodates diverse social, cultural, and economic backgrounds.
+                    </li>
+                    <li>Age Appropriateness: Tailored to the developmental stages of children.</li>
+                    <li>Evidence-Based Content: Offers reliable tools and resources on sexual education.</li>
+                    <li>Privacy and Data Safety: Protects user data and ensures confidentiality.</li>
+                </ol>
+            </div>
+            <div>
+                <h3>Concept: Sam Explores</h3>
+                <p>We combined the best elements of the top concepts to create the final design:
+                    <strong><mark class="highlightme">Sam Explores</mark></strong>. This solution integrates interactive
+                    reading features with tools that foster open
+                    parent-child conversations. The result is an inclusive, engaging, and educational tool designed to
+                    meet the diverse needs of users.
+                </p>
+                <div class="persona-map"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="deliver">
+        <h2>Usability Test</h2>
+        <p>
+            Once we had our initial mock up, feedback was gathered through user-based testing with parents and children
+            and expert-based testing involving fellow students, tutors, and lecturers. This rigorous process enabled us
+            to identify pain points, refine interactions, and improve the overall user experience.
+        </p>
+        <div class="test-findings">
+            <h3>Key Usability Findings</h3>
+            <div class="usertest">
+                
+                <div class="usertest-results">
+                    <h4>Interactive Storybook</h4>
+                    <div>
+                        <p id="strengths">Strengths</p>
+                        <ul>
+                            <li>Clarity & Accessibility: Clear, well-segmented content with simple language for younger
+                                audiences.</li>
+                            <li>Interactivity: Flashing icons and transitions fostered curiosity and excitement.</li>
+                            <li>Educational Value: Effectively addressed gaps in traditional sex education with
+                                foundational knowledge.</li>
+                        </ul>
+
+                        <p id="areasforimprovements">Areas for Improvements</p>
+                        <ul>
+                            <li>Interactive Consistency: Similar visual elements with varying interactivity caused
+                                confusion. </li>
+                            <li>Feedback Mechanisms: Lack of feedback for incorrect answers reduced learning impact.
+                            </li>
+                            <li>Content Depth: Some sections were text-heavy or overly complex, overwhelming younger
+                                users.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="usertest-results">
+                    <h4>Mobile Application</h4>
+                    <div>
+                        <p id="strengths">Strengths</p>
+                        <ul>
+                            <li>User Interface Design: Clean and user-friendly layout with appealing visuals.</li>
+                            <li>Content Presentation: Bite-sized summaries effectively delivered key topics.</li>
+                            <li>Parental Motivation: Highlighted gaps in users' own sex education and inspired proactive
+                                learning.</li>
+                        </ul>
+
+                        <p id="areasforimprovements">Areas for Improvements</p>
+                        <ul>
+                            <li>Content Appropriateness: Certain topics were too explicit or shallow for younger audiences.</li>
+                            <li>Confusing Interactivity: Icons and navigation lacked clarity, particularly for call-to-action elements.</li>
+                            <li>Instruction & Feedback: Users wanted clearer guidance on integrating the app with the storybook and
+                                addressing sensitive topics.</li>
+                            <li>Customization Features: Poor understanding of personalisation options led to confusion about their
+                                necessity.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        
+    </div>
+
+
+    <div class="final-prototype" id="final-prototype">
+        <h2>Sam Explores : Final Prototype</h2>
+        <p>
+            Below are the final prototypes of Sam Explores, showcasing the core features of both the storybook and
+            mobile application. While not fully functional, these prototypes effectively demonstrate the key
+            interactions, design elements, and features central to the user experience.
+        </p>
+        <div class="project-figma">
+            <div>
+                <h3>Interactive Storybook</h3>
+                <iframe
+                    src="https://embed.figma.com/proto/ewMdviqXTQgSWvKNLpDvW2/Portfolio-Prototypes?node-id=106-3297&scaling=scale-down&content-scaling=fixed&page-id=106%3A2950&starting-point-node-id=106%3A3288&embed-host=share"
+                    allowfullscreen></iframe>
+            </div>
+            <div>
+                <h3>Mobile Application for parents</h3>
+                <iframe
+                    src="https://embed.figma.com/proto/ewMdviqXTQgSWvKNLpDvW2/Portfolio-Prototypes?node-id=1-8028&p=f&scaling=scale-down&content-scaling=responsive&page-id=0%3A1&starting-point-node-id=1%3A8028&embed-host=share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var collapsibles = document.querySelectorAll(".collapsible");
+
+        // Add event listener to each button
+        collapsibles.forEach(function (collapsible) {
+            collapsible.addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+
+        // JavaScript to scroll to the "final-prototype" div
+        function scrollToFinalPrototype() {
+            document.getElementById('final-prototype').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+
+        // JavaScript for interactive navigation
+        const nav = document.getElementById('side-nav');
+        const sections = document.querySelectorAll('.section');
+        const navItems = document.querySelectorAll('.side-nav-item');
+
+        function updateNavigation() {
+            let isInMainSection = false;
+
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                const sectionId = section.id;
+
+                if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+                    // Only show side nav if in one of the target sections
+                    if (sectionId === 'discover' || sectionId === 'define' || sectionId === 'develop' || sectionId === 'deliver') {
+                        isInMainSection = true;
+                    }
+
+                    // Update the side navigation text styles and positions
+                    navItems.forEach(item => {
+                        item.style.fontSize = '16px';
+                        item.style.opacity = '0.5';
+                    });
+
+                    const activeItem = document.querySelector(`.side-nav-item[data-section="${sectionId}"]`);
+                    if (activeItem) {
+                        activeItem.style.fontSize = '24px'; // Big font for active section
+                        activeItem.style.opacity = '1'; // Full opacity for active section
+                    }
+                }
+            });
+
+            // If not in any of the main sections, hide the side-nav
+            if (!isInMainSection) {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        }
+
+        // Update navigation on scroll
+        window.addEventListener('scroll', updateNavigation);
+
+        // Smooth scroll to section when side-nav item is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const sectionId = e.target.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Initial update to handle page load position
+        updateNavigation();
+
+    </script>
 </body>
+
+
 
 </html>
