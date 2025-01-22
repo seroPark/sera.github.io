@@ -281,19 +281,6 @@ header {
 
 /* Project Page (Mindshare, SamExplores, etc.) */
 
-
-/* .side-nav {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  } */
-
   .side-nav {
 	position: fixed;
 	top: 50%;
@@ -335,7 +322,6 @@ header {
 .prototype-body {
     scroll-snap-align: start;
     min-height: 100vh;
-    /* Ensure each section takes at least 100vh */
 }
 
 .prototype-intro {
@@ -358,7 +344,6 @@ header {
 /* Left Column Styling */
 .left-column {
     flex: 1;
-    /* Take up one part of the available space */
     line-height: 1.5;
 }
 
