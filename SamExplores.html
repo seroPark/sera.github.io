@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="scripts.js">
     <link
         href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -19,6 +20,9 @@
         <nav class="nav">
             <button onclick="location.href='projects.html'">projects.</button>
             <button onclick="location.href='about.html'">about.</button>
+            <a href="assets/SeraPark_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <button>resume.</button>
+            </a>
         </nav>
     </header>
 
@@ -207,10 +211,27 @@
                 enabled us to dive deeper into user experiences, highlighting pain points and identifying opportunities
                 for improvement.
             </p>
-            <div class="persona-map">
-                <img class="map" src="assets/usermapkiyara.png" alt="user journey map of a child (kiyara)">
-                <img class="map" src="assets/usermaplana.png" alt="user journey map of a parent (lana)">
+
+            <div class="carousel-container">
+                <!-- Main image area -->
+                <div class="main-image">
+                    <img class="enlarged-image carousel-1" src="assets/usermapkiyara.png" alt="Main Image" />
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="thumbnails">
+                    <img src="assets/usermapkiyara.png" alt="Thumbnail 1" class="thumbnail active carousel-1"
+                        data-large="assets/usermapkiyara.png" />
+                    <img src="assets/usermaplana.png" alt="Thumbnail 2" class="thumbnail carousel-1"
+                        data-large="assets/usermaplana.png" />
+                </div>
             </div>
+            <!-- Fullscreen overlay for enlarged image -->
+            <div id="fullscreen-overlay" class="hidden">
+                <img id="fullscreen-image" src="" alt="Fullscreen View" />
+            </div>
+
+
         </div>
         <div class="ideation">
             <h2>Ideation</h2>
@@ -222,26 +243,32 @@
             </div>
             <div>
                 <ol>
-                    <li>Supports Continuous Learning: Encourages ongoing Comprehensive Sexuality Education for parents
+                    <li><strong>Supports Continuous Learning</strong>: Encourages ongoing Comprehensive Sexuality
+                        Education for parents
                         and adolescents.</li>
-                    <li>Facilitates Open Dialogue: Promotes meaningful conversations about sex-related topics between
+                    <li><strong>Facilitates Open Dialogue</strong>: Promotes meaningful conversations about sex-related
+                        topics between
                         parents and children.</li>
-                    <li>Accessibility and Inclusivity: Accommodates diverse social, cultural, and economic backgrounds.
+                    <li><strong>Accessibility and Inclusivity</strong>: Accommodates diverse social, cultural, and
+                        economic backgrounds.
                     </li>
-                    <li>Age Appropriateness: Tailored to the developmental stages of children.</li>
-                    <li>Evidence-Based Content: Offers reliable tools and resources on sexual education.</li>
-                    <li>Privacy and Data Safety: Protects user data and ensures confidentiality.</li>
+                    <li><strong>Age Appropriateness</strong>: Tailored to the developmental stages of children.</li>
+                    <li><strong>Evidence-Based Content</strong>: Offers reliable tools and resources on sexual
+                        education.</li>
+                    <li><strong>Privacy and Data Safety</strong>: Protects user data and ensures confidentiality.</li>
                 </ol>
             </div>
             <div>
-                <h3>Concept: Sam Explores</h3>
+                <h3 id="concept-sam-explores">Concept: Sam Explores</h3>
                 <p>We combined the best elements of the top concepts to create the final design:
                     <strong><mark class="highlightme">Sam Explores</mark></strong>. This solution integrates interactive
                     reading features with tools that foster open
                     parent-child conversations. The result is an inclusive, engaging, and educational tool designed to
                     meet the diverse needs of users.
                 </p>
-                <div class="persona-map"></div>
+                <div class="sam-initial-concept">
+                    <img src="assets/samexplores_initial.png" alt="Sam Explores Wireframes">
+                </div>
             </div>
         </div>
     </div>
@@ -256,7 +283,7 @@
         <div class="test-findings">
             <h3>Key Usability Findings</h3>
             <div class="usertest">
-                
+
                 <div class="usertest-results">
                     <h4>Interactive Storybook</h4>
                     <div>
@@ -294,11 +321,15 @@
 
                         <p id="areasforimprovements">Areas for Improvements</p>
                         <ul>
-                            <li>Content Appropriateness: Certain topics were too explicit or shallow for younger audiences.</li>
-                            <li>Confusing Interactivity: Icons and navigation lacked clarity, particularly for call-to-action elements.</li>
-                            <li>Instruction & Feedback: Users wanted clearer guidance on integrating the app with the storybook and
+                            <li>Content Appropriateness: Certain topics were too explicit or shallow for younger
+                                audiences.</li>
+                            <li>Confusing Interactivity: Icons and navigation lacked clarity, particularly for
+                                call-to-action elements.</li>
+                            <li>Instruction & Feedback: Users wanted clearer guidance on integrating the app with the
+                                storybook and
                                 addressing sensitive topics.</li>
-                            <li>Customization Features: Poor understanding of personalisation options led to confusion about their
+                            <li>Customization Features: Poor understanding of personalisation options led to confusion
+                                about their
                                 necessity.</li>
                         </ul>
 
@@ -310,7 +341,7 @@
         </div>
 
 
-        
+
     </div>
 
 
@@ -337,6 +368,9 @@
         </div>
     </div>
     </div>
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
 
     <script>
         var collapsibles = document.querySelectorAll(".collapsible");
@@ -408,7 +442,7 @@
             });
         });
 
-        window.addEventListener("scroll", function() {
+        window.addEventListener("scroll", function () {
             console.log(scroll);
         })
 
@@ -418,6 +452,65 @@
 
         // Initial update
         updateNavigation();
+
+
+        // JavaScript for image carousel
+        function carouselRegistration(cl) {
+            const thumbnails = document.querySelectorAll(".thumbnail." + cl);
+            const mainImage = document.querySelector(`.enlarged-image.${cl}`);
+            const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+            const fullscreenImage = document.getElementById('fullscreen-image');
+
+            // Handle thumbnail click to change main image
+            thumbnails.forEach((thumbnail) => {
+                thumbnail.addEventListener('click', () => {
+                    // Update main image
+                    const largeImageSrc = thumbnail.getAttribute('data-large');
+                    mainImage.src = largeImageSrc;
+
+                    // Highlight active thumbnail
+                    thumbnails.forEach((thumb) => thumb.classList.remove('active'));
+                    thumbnail.classList.add('active');
+                });
+            });
+
+            // Handle main image click to open fullscreen
+            mainImage.addEventListener('click', () => {
+                fullscreenImage.src = mainImage.src;
+                fullscreenOverlay.classList.add('visible');
+            });
+
+            // Handle fullscreen overlay click to close
+            fullscreenOverlay.addEventListener('click', () => {
+                fullscreenOverlay.classList.remove('visible');
+            });
+        }
+
+        carouselRegistration("carousel-1");
+
+
+
+
+
+        // JavaScript for Scroll to Top button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Show the button when scrolling down 20px
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top when button is clicked
+        scrollToTopBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Smooth scrolling
+            });
+        };
 
     </script>
 </body>

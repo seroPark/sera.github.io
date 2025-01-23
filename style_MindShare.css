@@ -485,6 +485,7 @@ header {
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    object-fit: contain;
   }
   
   .main-image img:hover {
@@ -563,6 +564,7 @@ header {
     transition: background-color 0.3s ease;
     font-family:'Afacad', sans-serif;
     font-weight: 400;
+    font-style: oblique;
   }
 
   .collapsible:hover {
@@ -620,77 +622,118 @@ header {
     font-weight: bolder;
 }
 
+.iteration {
+    margin-top: 100px;
+}
 
 
 
 
 
-  /* Sam Explores Back Up */
-  #final-prototype h2 {
-    color:#6e8bf6;
-    font-size: 30px;
-  }
+.usertest {
+    margin-top: 200px;
+}
 
-  .persona-map {
-    display: flex;
-    gap: 20px;
-    padding: 20px 0;
-  }
+.usertest p {
+    margin-bottom: 0;
+}
 
-  .map {
-    background-color:mistyrose;
+.process {
+    background-color: #fff;
     border-radius: 10px;
-    width: 50%;
-    margin: 20px 0;
-    transition: transform 0.25s ease;
-  }
-
-.map:hover {
-    transform: scale(1.8);
-}
-
-.usertest-results{
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-.usertest-results h4 {
-    margin: 0;
-}
-
-.usertest-results ul {
     padding-left: 20px;
 }
 
-.usertest {
+.process p, li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.process p {
+    font-weight: 500;
+}
+
+.userfinding {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 30px;
     padding: 20px 0;
+    width: 100%;
+    height: auto;;
 }
 
-#strengths {
-    color: rgb(17, 186, 17);
-    font-weight: bold;
+.strengths-suggestions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#areasforimprovements {
-    color: rgb(247, 101, 34);
-    font-weight: bold;
+.improvements {
+    flex: 1.4;
+    height: 100%;
 }
 
-#strengths, #areasforimprovements {
-    padding-top: 10px;
+.improvements div {
+    height:100%;
+    padding-bottom: 10px;
+}
+
+.strengths {
+    margin-bottom: 20px;
+}
+
+
+.dotpoints {
+    background-color: white;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.dotpoints ul {
+    padding-left: 20px;
+}
+
+.dotpoints li {
+    margin-bottom: 5px;
+}
+
+.dotpoints h4 {
+    margin: 0
+}
+
+.FinalPrototype {
+    margin-top: 200px;
+    padding: 40px 350px;
+}
+
+.FinalPrototype img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.FinalPrototype h2 {
+    color:rgb(229, 229, 229);
+    font-size: 100px;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+.FinalPrototype h3 {
+    color:#6e8bf6;
+    font-size: 30px;
 }
 
   .synthesis {
     margin-bottom: 200px;
   }
 
-  .project-figma {
-    display: flex;
-    gap: 20px;
+
+iframe {
     width: 100%;
+    height: 400px;
   }
 
 
@@ -715,3 +758,26 @@ header {
     background-position: fixed;
     padding-bottom: 0;
   }
+
+
+  #scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position on screen */
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    z-index: 99; /* Ensure it's on top of other elements */
+    font-size: 18px; /* Text size */
+    background-color: #6e8bf6; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Rounded button */
+    padding: 10px 15px; /* Button size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #333; /* Darker on hover */
+  }
+  
