@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Penguin_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Penguin's Plight</title>
+</head>
+
+<body>
+    <header>
+        <button class="logo" onclick="location.href='index.html'">sera.</button>
+        <nav class="nav">
+            <button onclick="location.href='projects.html'">projects.</button>
+            <button onclick="location.href='about.html'">about.</button>
+            <a href="assets/SeraPark_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <button>resume.</button>
+            </a>
+        </nav>
+    </header>
+
+    <div class="section" id="intro">
+        <div class="prototype-textimage">
+            <div class="left-column">
+                <h1 class="project_title">Penguin's Plight</h1>
+                <p>
+                    Penguin Plight" is an interactive experience that raises awareness about climate change’s impact on
+                    emperor penguins. Players explore challenges like melting ice, rising sea temperatures, and food
+                    scarcity while discovering how human actions can help protect their habitat and ecosystem.
+                </p>
+
+                <button class="video-button"
+                    onclick="window.open('https://drive.google.com/file/d/19mQW4txuVZkKZuUP8V-BdSEQu3MvjnvM/view', '_blank')">Click
+                    to watch Intro Video</button>
+
+
+            </div>
+
+            <div class="right-column">
+                <img src="assets/Penguin/penguin_intro.png" alt="Mock Up Images" class="intro-image">
+            </div>
+        </div>
+
+        <div class="scroll-container">
+            <p>Scroll for Design Process</p>
+            <div class="down-arrow">
+            </div>
+        </div>
+    </div>
+
+    <div class="overview">
+        <h2>01 GAME OVERVIEW</h2>
+        <p>Penguin Plight – interactive project aims to raise awareness about climate change and
+            its impact on the emperor penguins’ habitat. To address this critical environmental issue, our team chose to
+            highlight the struggles the Emperor Penguins face, as melting ice reduces their breeding grounds, and rising
+            sea temperatures reduce their krill food supply. By exploring the immersive VR environment, users learn
+            about the adverse effects of climate change on Antarctica and the Emperor Penguins, and the actionable steps
+            us humans can take to aid in their survival and mitigate climate change.</p>
+    </div>
+
+    <div class="design-dev">
+        <h2>02 DESIGN & DEVELOPMENT</h2>
+        <p>Antarctica as a whole is significantly decreasing in temperature causing the ice to rapidly melt resulting in
+            the sea ice seasons being reduced. With this in mind, our team wanted to implement and showcase the critical
+            conditions they're in, as a result of climate change. Through ideation processes, such as crazy 8's,
+            brainstorming and brain dumping.
+        </p>
+
+        <div class="carousel-container">
+            <p class="heading1">Thumbnail 1</p>
+            <p class="heading2">Thumbnail 2</p>
+            <p class="heading3">Thumbnail 3</p>
+
+            <!-- Main image area -->
+            <div class="main-image">
+                <img class="enlarged-image carousel-1" src="assets/Penguin/penguin_crazy8.png" alt="Main Image" />
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="thumbnails">
+                <img src="assets/Penguin/penguin_crazy8.png" alt="Thumbnail 1" class="thumbnail active carousel-1 t1"
+                    data-large="assets/Penguin/penguin_crazy8.png" />
+                <img src="assets/Penguin/penguin_moodboard.png" alt="Thumbnail 2" class="thumbnail carousel-1 t2"
+                    data-large="assets/Penguin/penguin_moodboard.png" />
+                <img src="assets/Penguin/penguin_360sketch.png" alt="Thumbnail 3" class="thumbnail carousel-1 t3"
+                    data-large="assets/Penguin/penguin_360sketch.png" />
+            </div>
+        </div>
+        <!-- Fullscreen overlay for enlarged image -->
+        <div id="fullscreen-overlay" class="hidden">
+            <img id="fullscreen-image" src="" alt="Fullscreen View" />
+        </div>
+
+    </div>
+
+    <div class="user-testing">
+        <h2>03 USER TESTING</h2>
+        <p>Several key issues were identified during testing:</p>
+        <ul>
+            <li>Lack of sound effects or interactive elements.</li>
+            <li>Movement was slow and rough.</li>
+            <li>Static objects created an unrealistic feel due to the absence of animations.</li>
+            <li>Limited guidance and prompts left users unsure of their goals.</li>
+            <li>Unrealistic environmental elements, such as trees and fireplaces, detracted from the intended setting.
+            </li>
+        </ul>
+
+        <p>We conducted a think-aloud protocol with five participants completing four tasks, followed by a questionnaire
+            for detailed feedback. An additional 16 users tested the prototype and completed the same
+            questionnaire.
+
+        </p>
+
+        <p>To address the confusion users faced upon entering the environment, we introduced interactive non-playable
+            characters, clarified task instructions, and added two objectives that highlight the effects of global
+            warming on emperor penguins.</p>
+
+        <p>The environment was refined to balance realism and playfulness by removing random assets and expanding the
+            area for smoother navigation.</p>
+
+    </div>
+
+    <div class="futurework">
+        <h2>04 FUTURE WORK</h2>
+        <div class="improvements">
+            <div>
+                <h3>Enhanced Gameplay Features</h3>
+                <p>Adding features such as collecting penguins, timers, score systems, and advanced NPC interactions,
+                    like
+                    having
+                    penguins follow the player, to increase engagement and challenge.
+                </p>
+            </div>
+
+            <div>
+                <h3>Respawn Mechanism</h3>
+                <p>Implementing a respawn feature for users who fall into the water after missing the ice.
+                </p>
+            </div>
+
+            <div>
+                <h3>Educational Ending Sequence</h3>
+                <p>Introducing an ending sequence that educates users on practical ways to combat climate change and
+                    support
+                    emperor penguin conservation.</p>
+            </div>
+
+            <div>
+                <h3>Expanded Environment</h3>
+                <p>Expanding the environment with additional assets to enhance realism and immerse users more deeply in
+                    a simulated
+                    Antarctic setting.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <script>
+
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Show the button when scrolling down 20px
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top when button is clicked
+        scrollToTopBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Smooth scrolling
+            });
+        };
+
+
+        // JavaScript for image carousel
+        function carouselRegistration(cl) {
+            const thumbnails = document.querySelectorAll(".thumbnail." + cl);
+            const heading1 = document.querySelector(".heading1");
+            const heading2 = document.querySelector(".heading2");
+            const heading3 = document.querySelector(".heading3");
+            const mainImage = document.querySelector(`.enlarged-image.${cl}`);
+            const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+            const fullscreenImage = document.getElementById('fullscreen-image');
+
+            // Handle thumbnail click to change main image
+            thumbnails.forEach((thumbnail) => {
+                thumbnail.addEventListener('click', () => {
+                    // Update main image
+                    const largeImageSrc = thumbnail.getAttribute('data-large');
+                    mainImage.src = largeImageSrc;
+
+                    // Highlight active thumbnail
+                    thumbnails.forEach((thumb) => thumb.classList.remove('active'));
+                    heading1.style.display = "none";
+                    heading2.style.display = "none";
+                    heading3.style.display = "none";
+
+                    thumbnail.classList.add('active');
+                    if (thumbnail.classList.contains('t1')) {
+                        heading1.style.display = "block";
+                    } else if (thumbnail.classList.contains('t2')) {
+                        heading2.style.display = "block";
+                    } else if (thumbnail.classList.contains('t3')) {
+                        heading3.style.display = "block";
+                    }
+                });
+            });
+
+            // Handle main image click to open fullscreen
+            mainImage.addEventListener('click', () => {
+                fullscreenImage.src = mainImage.src;
+                fullscreenOverlay.classList.add('visible');
+            });
+
+            // Handle fullscreen overlay click to close
+            fullscreenOverlay.addEventListener('click', () => {
+                fullscreenOverlay.classList.remove('visible');
+            });
+        }
+
+        carouselRegistration("carousel-1");
+
+    </script>
+
+</body>
+
+
+
+</html>
