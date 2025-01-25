@@ -139,14 +139,6 @@ header {
     min-height: 100vh;
 }
 
-.top,
-.final-proposal,
-.prototype-body {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    /* Ensure each section takes at least 100vh */
-}
-
 .prototype-intro {
     padding: 0px 150px;
 }
@@ -356,23 +348,82 @@ header {
     border-radius: 10px;
 }
 
-.insight h4 {
+.user-needs-features h4 {
     margin: 0;
     color:#112a87;
 }
 
-.insight ul {
-    list-style-type:circle;
-    padding-left: 20px;
+.needs-features-desc {
+  padding: 0px 10px;
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
 }
 
-.insight ol {
-    padding-left: 20px;
+.needs-features-desc p {
+  font-weight: 400;
+  font-family: 'Afacad', sans-serif;
+  font-size: 16px;
+  line-height: 2;
 }
 
-.insight li {
-    padding-bottom: 10px;
-    line-height: 1.5;
+.collapsible.active .arrow {
+transform: rotate(180deg);
+}
+
+.collapsible.active + .needs-features-desc {
+max-height: 1000px;
+}
+
+
+
+
+.collapsible {
+  background-color: transparent;
+  border: 0px;
+  border-radius: 20px;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family:'Afacad', sans-serif;
+  font-weight: 400;
+}
+
+.collapsible:hover {
+  background-color: white;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  color:#737373;
+}
+
+.insight-dotpoints {
+    padding: 0px 10px;
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.insight-dotpoints li {
+  padding: 5px 0;
+}
+
+.collapsible.active .arrow {
+  transform: rotate(180deg);
+}
+
+.collapsible.active + .insight-dotpoints {
+  max-height: 1000px;
 }
 
 
@@ -624,6 +675,16 @@ header {
 
 .iteration {
     margin-top: 100px;
+    padding: 0;
+}
+
+#deliver,
+#develop {
+  padding: 100px 280px;
+}
+
+.secion {
+  padding: 0;
 }
 
 
@@ -872,7 +933,7 @@ header {
 
 }
 
-/* MindShare 550 */
+/* MindShare 550 Mobile */
 
 @media (max-width: 550px) {
   header {
@@ -920,6 +981,10 @@ header {
 
 .nav button::after {
     display: none;
+}
+
+.scroll-container {
+  display: none;
 }
 
 #intro,
@@ -976,7 +1041,17 @@ header {
 }
 
 .FinalPrototype h3 {
-  margin-top: 100px;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.FinalPrototype h2 {
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+.FinalPrototype {
+  margin-top: 80px;
 }
 
 }

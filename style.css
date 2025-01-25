@@ -333,9 +333,7 @@ text-align: center;
     color: #000;
   }
 
-  .section {
-    min-height: 100vh;
-}
+
 
 .top,
 .final-proposal,
@@ -1024,6 +1022,24 @@ text-align: center;
 @media (max-width: 1000px) {
  /* projects 1000 */
 
+ header {
+    padding: 20px 100px;
+}
+
+.nav button {
+    font-size: 14px;
+}
+
+.nav button::after {
+    height: 1px;
+    bottom: -2px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+
  .card-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -1090,6 +1106,10 @@ text-align: center;
         display: none;
     }
 
+    .home-content {
+        padding: 0 20px;
+    }
+
      /* 500 ABOUT ME */
      .about {
         padding: 0 40px;
@@ -1115,7 +1135,9 @@ text-align: center;
 
 
 /* 550 Sam Explores */
-
+.scroll-container {
+    display:none;
+}
 
 .left-column {
     order: 2;
@@ -1134,6 +1156,15 @@ text-align: center;
 #deliver,
 #final-prototype {
     padding:20px 30px;
+}
+
+.section {
+    min-height: 80vh;
+}
+
+#intro {
+    padding-bottom: 0;
+    min-height: 70vh;
 }
 
 #intro h1 {

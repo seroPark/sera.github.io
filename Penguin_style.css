@@ -382,7 +382,7 @@ align-items: center;
 }
 
 
-/* Responsive 550 */
+/* Responsive 550 Mobile */
 @media (max-width: 550px) {
   header {
     padding: 20px;
@@ -430,6 +430,10 @@ align-items: center;
 
 .nav button::after {
     display: none;
+}
+
+.scroll-container {
+  display: none;
 }
 
 #intro,
