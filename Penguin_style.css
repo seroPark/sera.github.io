@@ -148,12 +148,13 @@ header {
     float: right;
     padding-top: 10px;
     flex: 1;
-    /* Take up two parts of the available space */
+    display: flex;
+align-items: center;
 }
 
 .intro-image {
-    float: right;
-    width: 100%
+    float:right;
+    width: 100%;
 }
 
 
