@@ -955,22 +955,7 @@ text-align: center;
         line-height: 1.7;
     }
 
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 100px;
-    }
-
-    .card-text h4 {
-        font-size: 18px;
-    }
-
-   #project-desc {
-        font-size: 14px;
-    }
-
     /* 700 Sam Explores */
-
 
     .left-column {
         order: 2;
@@ -1035,6 +1020,25 @@ text-align: center;
         display: none;
     }
 }
+
+@media (max-width: 1000px) {
+ /* projects 1000 */
+
+ .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 100px;
+}
+
+.card-text h4 {
+    font-size: 18px;
+}
+
+#project-desc {
+    font-size: 14px;
+}
+}
+
 
 /* RESPONSIVE width: 550 */
 
