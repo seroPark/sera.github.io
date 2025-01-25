@@ -16,6 +16,7 @@
 
 <body>
     <header>
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button> <!-- Hamburger Icon -->
         <button class="logo" onclick="location.href='index.html'">sera.</button>
         <nav class="nav">
             <button onclick="location.href='projects.html'">projects.</button>
@@ -511,6 +512,10 @@
                 behavior: "smooth", // Smooth scrolling
             });
         };
+
+        function toggleNav() {
+    document.querySelector('.nav').classList.toggle('active');
+}
 
     </script>
 </body>

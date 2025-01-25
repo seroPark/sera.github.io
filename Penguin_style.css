@@ -322,3 +322,135 @@ align-items: center;
     background-color: #333; /* Darker on hover */
   }
   
+
+  .hamburger {
+    display: none;
+}
+
+/* Responsive 900 */
+@media (max-width: 900px) {
+  header {
+    padding: 20px 100px;
+}
+
+.nav button {
+    font-size: 14px;
+}
+
+.nav button::after {
+    height: 1px;
+    bottom: -2px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.prototype-textimage {
+    flex-direction: column;
+}
+
+.left-column {
+  order: 2;
+  padding: 0;
+}
+
+.right-column {
+  order: 1;
+  padding: 0;
+}
+
+.video-button {
+  margin-top: 0;
+}
+
+.overview,
+.design-dev,
+.user-testing,
+.futurework {
+  padding: 80px 100px;
+}
+
+.improvements {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.improvements div {
+  width: 90%;
+}
+}
+
+
+/* Responsive 550 */
+@media (max-width: 550px) {
+  header {
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: flex; /* Flex display is needed to show the nav items */
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -250px; /* Initially hide the menu off-screen */
+    width: 250px; /* Set the width of the side menu */
+    height: 100vh; /* Full height */
+    background-color: #f8f8f8;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    padding-top: 100px; /* Adjust based on the header height */
+    transition: left 0.3s ease-in-out; /* Smooth transition for the slide effect */
+    align-items: flex-start;
+    }
+
+.nav.active {
+    left: 0; /* Slide to the visible position */
+  }
+
+.nav.active button{
+    padding-left: 40px;
+  }
+
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    z-index: 1000;
+  }
+
+/* Center the logo */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo */
+  }
+
+.nav button::after {
+    display: none;
+}
+
+#intro,
+.overview,
+.design-dev,
+.user-testing,
+.futurework {
+  padding:80px 30px;
+}
+
+.improvements {
+  display: flex;
+  flex-direction: column;
+}
+
+.improvements div {
+  padding: 10px 20px;
+}
+
+.improvements h3 {
+  margin-top: 10px;
+}
+
+}

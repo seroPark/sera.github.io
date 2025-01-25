@@ -1,5 +1,3 @@
-
-
 .highlightme {
     background-color: #fff2ce;
 }
@@ -10,19 +8,18 @@ body {
     font-family: 'Afacad', sans-serif;
 }
 
-header {
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    padding-left: 150px;
-    /* Left padding for consistent spacing */
-    padding-right: 150px;
-    /* Right padding for consistent spacing */
+    padding: 50px 150px;
+    z-index: 1000;
+    background-color: #f8f8f8;
+
 }
 
 #intro {
-    padding: 20px 150px 20px 150px;
+    padding: 20px 150px;
     /* Combine padding properties */
 }
 
@@ -31,6 +28,10 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 150px;
+}
+
+.left-section {
+    flex: 1;
 }
 
 .left-section h1 {
@@ -57,22 +58,15 @@ header {
 
 .browse-button {
     background-color: #FFBA52;
-    /* Button color */
     border: none;
-    /* No border */
     border-radius: 35px;
-    /* Round button */
     padding: 20px 60px;
-    /* Button padding */
     cursor: pointer;
-    /* Pointer cursor on hover */
     font-size: 20px;
-    /* Font size for button */
     font-weight: 300;
     color: white;
     font-family: 'Afacad', sans-serif;
     margin-top: 20px;
-    /* Space above button */
 }
 
 .browse-button:hover {
@@ -82,17 +76,17 @@ header {
 
 .right-section {
     display: flex;
-    justify-content:end;
-    vertical-align: middle;
+    justify-content: end;
     align-items: center;
+    height: 100%;
+    flex: 1.5;
 }
 
 .right-section img {
-    max-width: 80%;
-    /* Make GIF responsive */
-    height: auto;
-    /* Maintain aspect ratio */
+    width: 80%;
+    height: 100%;
     object-fit: fill;
+    /* padding-top: 5%; */
 }
 
 .logo {
@@ -175,10 +169,6 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
-}
-
-.contact-details {
-    margin-top: 20px;
 }
 
 .text-section {
@@ -352,10 +342,6 @@ text-align: center;
 .prototype-body {
     scroll-snap-align: start;
     min-height: 100vh;
-}
-
-.prototype-intro {
-    padding: 0px 150px;
 }
 
 .prototype-textimage {
@@ -751,47 +737,47 @@ text-align: center;
     padding-top: 10px;
 }
 
-  .synthesis {
+.synthesis {
     margin-bottom: 200px;
   }
 
-  .project-figma {
+.project-figma {
     display: flex;
     gap: 20px;
     width: 100%;
-  }
+}
 
-  .project-figma div {
+.project-figma div {
     width: 50%;
-  }
-  .project-figma iframe {
+}
+.project-figma iframe {
     width: 100%;
     height: 400px;
-  }
+}
 
 
-  #discover {
+#discover {
     background-image: url('assets/background-magnifyingglass.png');
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: auto;
-  }
+}
 
-  #define {
+#define {
     background-image: url('assets/background-data.png');
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: right;
-  }
+}
 
-  #develop {
+#develop {
     background-image: url('assets/background-idea.png');
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
-  }
+}
 
-    #scrollToTopBtn {
+#scrollToTopBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed position on screen */
     bottom: 20px; /* Distance from bottom */
@@ -806,8 +792,405 @@ text-align: center;
     cursor: pointer; /* Pointer cursor on hover */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow */
     transition: background-color 0.3s; /* Smooth hover effect */
-  }
+}
   
-  #scrollToTopBtn:hover {
+#scrollToTopBtn:hover {
     background-color: #333; /* Darker on hover */
+}
+
+.hamburger {
+    display: none;
+}
+
+
+/* RESPONSIVE width: 950 */
+
+@media (max-width: 950px) {
+    
+    .home-content {
+        flex-direction: column; /* Stack the divs vertically */
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .left-section {
+        order: 2;
+    }
+    
+    .right-section {
+        order: 1;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .right-section img {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .browse-button {
+        padding: 10px 40px;
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 150px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+    /* 1100 Sam Explores */
+@media (max-width: 1100px) {
+    #discover,
+    #define,
+    #develop,
+    #deliver,
+    #final-prototype {
+        padding:20px 160px;
+    }
+
+    .project-problem {
+        flex-direction: column;
+    }
+
+    .research-methods {
+        flex-direction: column;
+    }
+
+    .method {
+        width: 100%;
+    }
+
+    .usertest {
+        flex-direction: column;
+        padding: 0;
+    }
+
+
+
+}
+
+/* RESPONSIVE width: 700 */
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px 100px;
+    }
+
+    .nav button {
+        font-size: 14px;
+    }
+
+    .nav button::after {
+        height: 1px;
+        bottom: -2px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+
+    .home-content {
+        padding: 0 100px;
+    }
+
+    .left-section h1 {
+        font-size: 22px;
+    }
+
+    .left-section p {
+        font-size: 16px;
+    }
+
+    .browse-button {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+
+    .right-section img {
+        width: 100%;
+    }
+
+    
+    /* 700 ABOUT ME */
+    .about {
+        padding: 0px 100px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-section {
+        margin-right: 0;
+        width: 50%;
+    }
+
+    .profile-photo {
+        max-width: 80%;
+        height: auto;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .text-section {
+        padding: 0;
+    }
+
+    .text-section h3 {
+        font-size: 20px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 100px;
+    }
+
+    .card-text h4 {
+        font-size: 18px;
+    }
+
+   #project-desc {
+        font-size: 14px;
+    }
+
+    /* 700 Sam Explores */
+
+
+    .left-column {
+        order: 2;
+        padding: 0;
+      }
+    
+    .right-column {
+        order: 1;
+        padding: 0;
+    }
+
+    #intro,
+    #discover,
+    #define,
+    #develop,
+    #deliver,
+    #final-prototype {
+        padding:20px 100px;
+    }
+
+    #intro h1 {
+        margin-top: 0;
+    }
+
+    .prototype-textimage {
+        flex-direction: column;
+    }
+
+
+    .side-nav {
+    display: none;
+    }
+
+
+    .project-problem {
+        flex-direction: column;
+    }
+
+    .research-methods {
+        flex-direction: column;
+    }
+
+    .method {
+        width: 100%;
+    }
+
+    .usertest {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .project-figma {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .project-figma div {
+        width: 100%;
+      }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/* RESPONSIVE width: 550 */
+
+@media (max-width: 550px) {
+    header {
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: flex; /* Flex display is needed to show the nav items */
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -250px; /* Initially hide the menu off-screen */
+        width: 250px; /* Set the width of the side menu */
+        height: 100vh; /* Full height */
+        background-color: #f8f8f8;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        padding-top: 100px; /* Adjust based on the header height */
+        transition: left 0.3s ease-in-out; /* Smooth transition for the slide effect */
+        align-items: flex-start;
+    }
+
+    .nav.active {
+        left: 0; /* Slide to the visible position */
+    }
+
+    .nav.active button{
+        padding-left: 40px;
+    }
+    .hamburger {
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        z-index: 1000;
+    }
+
+    /* Center the logo */
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); /* Center the logo */
+    }
+
+    .nav button::after {
+        display: none;
+    }
+
+     /* 500 ABOUT ME */
+     .about {
+        padding: 0 40px;
+    }
+
+    /* 500 Projects */
+
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+
+    .card-image {
+        width: 100%; /* Set image to take half the width */
+        margin-bottom: 0; /* Remove bottom margin when in row layout */
+    }
+
+.card-text {
+    padding-top: 10px;
+}
+
+
+/* 550 Sam Explores */
+
+
+.left-column {
+    order: 2;
+    padding: 0;
   }
+
+.right-column {
+    order: 1;
+    padding: 0;
+}
+
+#intro,
+#discover,
+#define,
+#develop,
+#deliver,
+#final-prototype {
+    padding:20px 30px;
+}
+
+#intro h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.left-column p {
+    font-size: 14px;
+}
+
+.prototype-textimage {
+    flex-direction: column;
+}
+
+.scroll-button {
+    padding: 15px 40px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#scrollToTopBtn {
+    font-size: 12px;
+}
+
+.side-nav {
+display: none;
+}
+
+
+.project-problem {
+    flex-direction: column;
+    padding: 0;
+}
+
+.project-question {
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.research-methods {
+    flex-direction: column;
+}
+
+.method {
+    width: 80%;
+}
+
+.usertest-results {
+    padding: 20px;
+}
+
+.project-figma {
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.project-figma div {
+    width: 100%;
+  }
+
+
+
+}

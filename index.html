@@ -15,6 +15,7 @@
 
 <body>
     <header>
+        <button class="hamburger" onclick="toggleNav()">&#9776;</button> <!-- Hamburger Icon -->
         <button class="logo" onclick="location.href='index.html'">sera.</button>
         <nav class="nav">
             <button onclick="location.href='projects.html'">projects.</button>
@@ -29,10 +30,14 @@
         <main class="home-content">
             <div class="left-section">
                 <h1>Hi there, I'm <strong>sera.</strong> 👋</h1>
-                <p>I’m an aspiring UI/UX designer with a love for creating seamless,
+                <!-- <p>I’m an aspiring UI/UX designer with a love for creating seamless,
                     user-friendly user interface designs that are enjoyable to interact with.</p>
                 <p>I’m also passionate about coding, and I’ve built this website from the ground up to share my work and skills.</p>
-                <p>Take a look around - I hope you enjoy exploring my work!</p>
+                <p>Take a look around - I hope you enjoy exploring my work!</p> -->
+                <p>I'm a UI/UX designer passionate about creating intuitive, user-friendly interfaces that are simple
+                    and enjoyable. </p>
+                <p>I built this website to showcase my work and skills - feel free to explore !</p>
+                </p>
 
                 <!-- <h6 class="note">
                     * This site is a continuous work in progress, so you might notice some areas still being refined.
@@ -47,9 +52,11 @@
         </main>
     </div>
 
-    <div class="game-intro-video">
-
-    </div>
+    <script>
+    function toggleNav() {
+    document.querySelector('.nav').classList.toggle('active');
+}
+    </script>
 </body>
 
 </html>
