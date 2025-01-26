@@ -844,6 +844,11 @@ text-align: center;
     }
 }
 
+.sam-initial-concept {
+    width: 100%;
+    overflow: hidden;
+}
+
     /* 1100 Sam Explores */
 @media (max-width: 1100px) {
     #discover,
